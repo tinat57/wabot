@@ -1,0 +1,5 @@
+[1108/084813.919:ERROR:dxva_video_decode_accelerator_win.cc(1426)] DXVAVDA fatal error: Could not load mf.dll: The specified module could not be found. (0x7E)
+[1108/084814.636:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[1108/084814.636:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[1108/084816.616:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[1108/084816.618:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)

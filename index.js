@@ -306,7 +306,7 @@ const createSession = function(id, description) {
 
   client.on('disconnected', (reason) => {
     io.emit('message', { id: id, text: 'Whatsapp is disconnected!' });
-    client.destroy();
+    //client.destroy();
     client.initialize();
 
     // Menghapus pada file sessions

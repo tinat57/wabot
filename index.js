@@ -290,9 +290,16 @@ const createSession = function(id, description) {
                     client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/9.mp4'));
                 }
             }else if(rlt.meg == 'vid10'){
-                if(fs.existsSync('./pic/10.mp4')){
-                    client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/10.mp4'));
+                if(fs.existsSync('./pic/10.mp4')&&fs.existsSync('./pic/11.mp4')){
+                  client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/10.mp4'));
+                  client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/11.mp4'));
                 }
+                setTimeout(async()=>{
+                  var fixt1 = await Message.findOne({key:'fixt1'});
+                  if(fixt1 !== null) {
+                  client.sendMessage(message.from, fixt1.meg);
+                  }
+                },5000);
             }else{
                 client.sendMessage(message.from, rlt.meg);
             }

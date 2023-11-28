@@ -299,7 +299,7 @@ const createSession = function(id, description) {
                   if(fixt1 !== null) {
                   client.sendMessage(message.from, fixt1.meg);
                   }
-                },5000);
+                },10000);
             }else{
                 client.sendMessage(message.from, rlt.meg);
             }

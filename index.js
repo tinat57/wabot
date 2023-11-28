@@ -243,9 +243,16 @@ const createSession = function(id, description) {
                     client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/9.jpg'));
                 }
             }else if(rlt.meg == 'pic10'){
-                if(fs.existsSync('./pic/10.jpg')){
-                    client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/10.jpg'));
+                if(fs.existsSync('./pic/10.jpg')&&fs.existsSync('./pic/11.jpg')){
+                  client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/10.jpg'));
+                  client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/11.jpg'));
                 }
+                setTimeout(async()=>{
+                  var fixt1 = await Message.findOne({key:'fixt1'});
+                  if(fixt1 !== null) {
+                  client.sendMessage(message.from, fixt1.meg);
+                  }
+                },5000);
             }else if(rlt.meg == 'vid1'){
                 if(fs.existsSync('./pic/1.mp4')){
                     client.sendMessage(message.from,MessageMedia.fromFilePath('./pic/1.mp4'));
